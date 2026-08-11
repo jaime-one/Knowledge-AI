@@ -9,6 +9,10 @@ class VaultNoteInfo(BaseModel):
     folder: str = Field(description="Carpeta contenedora de la nota, string vacío si está en la raíz del vault.")
 
 
+class VaultNoteDetail(VaultNoteInfo):
+    content: str = Field(description="Contenido crudo del archivo markdown, incluye frontmatter si existe.")
+
+
 class DraftRequest(BaseModel):
     text: str = Field(min_length=1, description="Texto crudo de la nota a ingerir.")
     main_theme: str | None = Field(default=None, description="Tema principal sugerido por el usuario, opcional.")

@@ -57,7 +57,7 @@ def run_decision_worker(knowledge: KnowledgeOutput, existing_folders: list[str])
     def slugify_tool(title: str) -> str:
         """Convierte un título en un nombre de archivo .md válido (minúsculas,
         sin tildes, separado por guiones) — la misma convención que usan las
-        notas nuevas. Usar únicamente si decidís renombrar una nota existente
+        notas nuevas. Usar únicamente si decides renombrar una nota existente
         porque su alcance creció más allá del título/nombre actual, para que
         el nuevo nombre siga esa convención en vez de escribirlo a mano."""
         return f"{slugify(title)}.md"

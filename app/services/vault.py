@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from app.models.api import VaultNoteInfo
+from app.models.api import VaultNoteDetail, VaultNoteInfo
 
 
 def list_existing_folders(vault_path: str) -> list[str]:
@@ -22,3 +22,21 @@ def list_notes(vault_path: str) -> list[VaultNoteInfo]:
         folder = str(relative.parent) if relative.parent != Path(".") else ""
         notes.append(VaultNoteInfo(path=str(relative), folder=folder))
     return notes
+
+
+def read_note(vault_path: str, note_path: str) -> VaultNoteDetail | None:
+    root = Path(vault_path).resolve()
+    candidate = (root / note_path).resolve()
+
+    if not candidate.is_relative_to(root):
+        raise ValueError("La ruta solicitada está fuera del vault.")
+
+    relative = candidate.relative_to(root)
+    if any(part.startswith(".") for part in relative.parts):
+        return None
+    if not candidate.is_file() or candidate.suffix != ".md":
+        return None
+
+    content = candidate.read_text(encoding="utf-8")
+    folder = str(relative.parent) if relative.parent != Path(".") else ""
+    return VaultNoteDetail(path=str(relative), folder=folder, content=content)

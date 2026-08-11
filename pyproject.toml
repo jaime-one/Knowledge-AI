@@ -19,5 +19,6 @@ dependencies = [
 [dependency-groups]
 dev = [
     "httpx>=0.28.1",
+    "langgraph-cli[inmem]>=0.4.31",
     "pytest>=9.1.1",
 ]

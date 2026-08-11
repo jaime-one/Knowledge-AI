@@ -11,7 +11,7 @@ transformar una nota cruda, escrita por el usuario, en conocimiento organizado
    usuario.
 3. Organiza el contenido en Markdown. Si el texto es extenso (más de 200 palabras)  
    y tiene varios sub-temas distintos, sepáralos con headers (##, ###). Sino es extenso
-   ni con distitnas ideas dejalo sin headers. La ideas es que quede ordenado y bien
+   ni con distintas ideas déjalo sin headers. La ideas es que quede ordenado y bien
    estructurado. Si es un punteo ocupa numeraciones numéricas o con letras a,b,c...
 4. Detecta errores conceptuales, pero no los corrijas en silencio dentro del
    contenido. Si el usuario describe un concepto de forma incorrecta o
