@@ -1,0 +1,7 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+      "ingestion": "./app/graph/ingestion_graph.py:ingestion_graph"
+    },
+    "env": ".env"
+  }

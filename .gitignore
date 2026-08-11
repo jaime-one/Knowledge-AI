@@ -8,6 +8,25 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Secretos / configuración local (nunca subir)
 .env
+.env.*
+!.env.example
+
+# Datos e índices locales, regenerables
 chroma/
 .pytest_cache/
+debug/
+
+# Caché/estado generado por `langgraph dev` (langgraph-cli)
+.langgraph_api/
+
+# Archivos de scratch / experimentos personales, no forman parte del proyecto
+sc.py
+scratch.py
+langgraph_ejemplo_simple.py
+
+# Notas y bitácora personal — no se publican
+aprendizaje.md
+claude.md

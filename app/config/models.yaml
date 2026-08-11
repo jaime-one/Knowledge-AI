@@ -1,0 +1,23 @@
+knowledge_worker:
+  provider: openai
+  model: gpt-5.4-nano
+  temperature: 0.2
+
+classification_worker:
+  provider: openai
+  model: gpt-5.4-mini
+  temperature: 0.0
+
+decision_worker:
+  provider: openai
+  model: gpt-5-mini
+  temperature: 0.2
+
+markdown_worker:
+  provider: openai
+  model: gpt-5.4-mini
+  temperature: 0.1
+
+embedding_worker: 
+  provider: openai
+  model: text-embedding-3-small
